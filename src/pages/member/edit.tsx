@@ -36,7 +36,7 @@ export default function EditMember() {
         },
       });
       alert("Membro editado com sucesso!");
-      window.location.pathname = "/profile";
+      router.replace("/profile")
     } catch (error) {
       console.error(error);
     }
@@ -51,7 +51,7 @@ export default function EditMember() {
         },
       });
       alert("Membro excluído com sucesso!")
-      window.location.pathname = "/profile";
+      router.replace("/profile")
     } catch (error) {
       console.error(error);
     }

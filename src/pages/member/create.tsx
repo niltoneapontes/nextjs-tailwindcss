@@ -2,9 +2,11 @@ import Image from "next/image";
 import Logo from "@/assets/logo.png";
 import "@/app/globals.css";
 import api from "@/api";
+import { useRouter } from "next/router";
 
 export default function CreateMember() {
   const today = new Date();
+  const router = useRouter()
 
   async function onSubmit(e: any) {
     e.preventDefault();
@@ -30,7 +32,7 @@ export default function CreateMember() {
         }
       });
       alert("Membro criado com sucesso!")
-      window.location.pathname = "/profile";
+      router.replace("/profile")
     } catch (error) {
       console.error(error);
     }

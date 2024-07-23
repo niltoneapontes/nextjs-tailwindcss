@@ -62,7 +62,6 @@ export default function Profile() {
         setSearchId(value)
       }}
       onAction={() => {
-        console.log("aqui")
           router.replace("/member/edit", { query: { id: searchId }})
       }}></SearchBar>
       </main>
